@@ -69,6 +69,11 @@ public class ReactNativeSmooch extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
+  public void showWithStartingText(String startingText) {
+     ConversationActivity.show(getReactApplicationContext(), startingText);
+  }
+
+  @ReactMethod
   public void close() {
     ConversationActivity.close();
   }

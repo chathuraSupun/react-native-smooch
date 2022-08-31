@@ -13,6 +13,14 @@ RCT_EXPORT_METHOD(show) {
     });
 };
 
+RCT_EXPORT_METHOD(showWithStartingText:(NSString*)text) {
+    NSLog(@"Smooch showWithStartingText %@", text);
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [Smooch showWithStartingText:text];
+    });
+};
+
 RCT_EXPORT_METHOD(close) {
     NSLog(@"Smooch Close");
     
