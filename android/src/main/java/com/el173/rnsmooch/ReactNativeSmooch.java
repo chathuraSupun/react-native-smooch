@@ -70,7 +70,7 @@ public class ReactNativeSmooch extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void showWithStartingText(String startingText) {
-     ConversationActivity.builder().withFlags(Intent.FLAG_ACTIVITY_NEW_TASK).show(getReactApplicationContext(), startingText);
+     ConversationActivity.builder().withFlags(Intent.FLAG_ACTIVITY_NEW_TASK).withStartingText(startingText);
   }
 
   @ReactMethod
